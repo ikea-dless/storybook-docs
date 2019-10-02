@@ -1,0 +1,37 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Button } from '@storybook/react/demo';
+
+<!--
+* https://github.com/storybookjs/storybook/blob/next/addons/docs/docs/mdx.md#basic-example
+* https://mdxjs.com
+-->
+
+<Meta title="DesignSystem|Button" component={Button} />
+
+# Button
+
+With `MDX` we can define a story for `Button` right in the middle of our
+markdown documentation.
+
+## h2
+--------------
+テキストああああああああ
+
+```js
+// tsのシンタックスハイライトはないっぽい(ほぼ書かないから支障ない)
+const text = "hoge"
+```
+
+<div style={{ padding: '20px', backgroundColor: 'tomato' }}>
+  <h3>preview内に書かないとhtmlと変わらない</h3>
+</div>
+
+<Preview>
+  <Story name="story name hairu">
+    <Button onClick={() => {}}>
+    <span role="img" aria-label="so cool">
+      😀 😎 👍 💯
+    </span>
+  </Button>
+  </Story>
+</Preview>
