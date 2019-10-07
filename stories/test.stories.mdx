@@ -1,5 +1,6 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { Button } from '@storybook/react/demo';
+import { Text } from "../src/Text"
 
 <!--
 * https://github.com/storybookjs/storybook/blob/next/addons/docs/docs/mdx.md#basic-example
@@ -29,9 +30,15 @@ const text = "hoge"
 <Preview>
   <Story name="story name hairu">
     <Button onClick={() => {}}>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
-  </Button>
+      <span role="img" aria-label="so cool">
+        😀 😎 👍 💯
+      </span>
+    </Button>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="message component">
+    <Text message="message........" />
   </Story>
 </Preview>
